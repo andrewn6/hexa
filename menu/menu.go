@@ -10,12 +10,12 @@ func main() {
 }
 
 func Menu() {
-	cfmt.Println("\n\n Hexa, {{the adventure game}}::red")
+	cfmt.Println("\n\n Hexa, {{the adventure game}}::cyan")
 	fmt.Println("────────────────────────────────────")
-	fmt.Println("Select an option to get started")
-	fmt.Println("1) Start")
-	fmt.Println("2) How to")
-	fmt.Println("3) Quit")
+	cfmt.Println("{{Select an option to get started}}::cyan")
+	cfmt.Println("1) {{Start}}::red")
+	cfmt.Println("2) {{How to}}::red")
+	cfmt.Println("3) {{Quit}}::red")
 
 	var input string
 
@@ -25,13 +25,13 @@ func Menu() {
 
 		switch input {
 		case "1":
-			fmt.Print("Ok! Let's get started!")
+			fmt.Println("Ok! Let's get started!")
 			// todo add / import game func here
 		case "2":
-			fmt.Print("Now entering the tutorial...")
+			fmt.Println("Now entering the tutorial...")
 			// todo add tutorial func
 		case "3":
-			fmt.Print("Ok.. see you next time!")
+			cfmt.Println("{{Quiting...}}::red")
 			os.Exit(0)
 		}
 	}
