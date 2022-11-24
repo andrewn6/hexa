@@ -2,14 +2,28 @@ package menu
 
 import (
 	"fmt"
+	"hexa/game"
 	"os"
-  "github.com/i582/cfmt/cmd/cfmt"
+
+	"github.com/i582/cfmt/cmd/cfmt"
 )
 
-func main() {
-}
-
 func Menu() {
+	cfmt.Print(`
+          ----
+         /    \
+    ____/      \____
+   /    \      /    \
+  /      \____/      \
+  \      /    \      /
+   \____/      \____/
+   /    \      /    \
+  /      \____/      \
+  \      /    \      /
+   \____/      \____/
+        \      /
+         \____/ 
+`)
 	cfmt.Println("\n\n Hexa, {{the adventure game}}::cyan")
 	fmt.Println("────────────────────────────────────")
 	cfmt.Println("{{Select an option to get started}}::cyan")
@@ -25,8 +39,8 @@ func Menu() {
 
 		switch input {
 		case "1":
-			fmt.Println("Ok! Let's get started!")
-			// todo add / import game func here
+			cfmt.Println("{{Ok! Let's get started!}}::green\n")
+			game.Game()
 		case "2":
 			fmt.Println("Now entering the tutorial...")
 			// todo add tutorial func
