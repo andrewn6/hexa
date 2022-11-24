@@ -5,6 +5,6 @@ import (
 )
 
 func main() {
-   menu.Menu()
+  menu.Menu()
 }
 

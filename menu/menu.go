@@ -1,27 +1,39 @@
 package menu
 
 import (
-	"log"
-
-	ui "github.com/gizak/termui/v3"
-	"github.com/gizak/termui/v3/widgets"
+	"fmt"
+	"os"
+  "github.com/i582/cfmt/cmd/cfmt"
 )
 
+func main() {
+}
+
 func Menu() {
-	if err := ui.Init(); err != nil {
-		log.Fatalf("failed to initialize termui: %v", err)
-	}
-	defer ui.Close()
+	cfmt.Println("\n\n Hexa, {{the adventure game}}::red")
+	fmt.Println("────────────────────────────────────")
+	fmt.Println("Select an option to get started")
+	fmt.Println("1) Start")
+	fmt.Println("2) How to")
+	fmt.Println("3) Quit")
 
-	p := widgets.NewParagraph()
-	p.Text = "Hello World!"
-	p.SetRect(0, 0, 25, 5)
+	var input string
 
-	ui.Render(p)
+	for input != "1" && input != "2" && input != "3" {
+		fmt.Print("→")
+		fmt.Scan(&input)
 
-	for e := range ui.PollEvents() {
-		if e.Type == ui.KeyboardEvent {
-			break
+		switch input {
+		case "1":
+			fmt.Print("Ok! Let's get started!")
+			// todo add / import game func here
+		case "2":
+			fmt.Print("Now entering the tutorial...")
+			// todo add tutorial func
+		case "3":
+			fmt.Print("Ok.. see you next time!")
+			os.Exit(0)
 		}
 	}
+
 }
