@@ -1,10 +1,9 @@
 package main
 
 import (
-  "hexa/menu"
+	"hexa/menu"
 )
 
 func main() {
-  menu.Menu()
+	menu.Menu()
 }
-

@@ -3,8 +3,8 @@ package menu
 import (
 	"fmt"
 	"hexa/game"
+  "hexa/tutorial"
 	"os"
-
 	"github.com/i582/cfmt/cmd/cfmt"
 )
 
@@ -42,8 +42,7 @@ func Menu() {
 			cfmt.Println("{{Ok! Let's get started!}}::green\n")
 			game.Game()
 		case "2":
-			fmt.Println("Now entering the tutorial...")
-			// todo add tutorial func
+      tutorial.Tutorial()
 		case "3":
 			cfmt.Println("{{Quiting...}}::red")
 			os.Exit(0)
