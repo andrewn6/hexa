@@ -34,7 +34,7 @@ func Game() {
 	var Wood int = 0
 	var Leafs int = 0
 
-	cfmt.Println("{{You woke up in a old abandoned house, after a huge combat fight with the biggest dragon in the village. Do you stay to explore? or do you exit the house}}::cyan.\n")
+	cfmt.Println("{{You woke up in a old abandoned house, after a huge combat fight with a huge monster. Do you stay to explore? or do you exit the house}}::cyan.\n")
 	cfmt.Println("If you choose to stay, type 1, if you choose to leave type 2.\n")
 
 	for input != "1" && input != "2" {
@@ -46,11 +46,11 @@ func Game() {
 			hp := Health - 50
 			cfmt.Println("{{Uh oh.. looks like a booby trap got set off. Your health is now at}}::red: ", hp, "%\n")
 		case "2":
-			cfmt.Println("{{You left the house and went to the a foreign village in the disance where a friendly local offers to feed and give you a place to rest.}}::green\n")
+			cfmt.Println("{{You left the house and went to the a foreign village in the disance where a friendly local offers to feed and give you a place to rest.}}::cyan\n")
 		}
 	}
 
-	cfmt.Println("{{You are now in a village, you can go to the shop to buy items, or you can go to the forest to gather resources.}}::cyan.\n")
+	cfmt.Println("{{After running away from the house, you end up in a village. You can go to the shop to buy items, or you can go to the forest to gather resources.}}::cyan.\n")
 	cfmt.Println("If you choose to go to the shop type 1, and if you choose to go to the forest to gather resources type 2.\n")
 
 	var input_2 string
@@ -61,15 +61,18 @@ func Game() {
 		switch input_2 {
 		case "1":
 			coins := Coins - 100
-			cfmt.Println("{{You go to the shop and buy a great steel rustic sword for}}::cyan: ", coins)
+			cfmt.Println("{{You go to the shop and buy a great steel rustic sword for}}::cyan: ", coins, "coins\n")
 		case "2":
 			coins := Coins + 20
 			wood := Wood + 2
 			leafs := Leafs + 5
-			cfmt.Println("{{You enter the forest and gather some wood, leafs. You even found}}::green.\n", coins, wood, leafs)
+			cfmt.Println("{{You enter the forest and gather some wood, leafs.}}::green")
+			cfmt.Println("{{You now have}}::green: ", coins, " coins, ", wood, " wood, ", leafs, " leafs\n ")
 		}
 
 	}
+
+	cfmt.Println("{{You make your way back to the house of the local who offered to give you a bed for the night}}::cyan")
 	if Health <= 0 {
 		cfmt.Println("{{You did not pass, game over :(.\n}}::red")
 	}
