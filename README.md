@@ -1,8 +1,4 @@
-# hexa
-
-hi, this is a school project for my computer science course.
-
-It is written in Go & uses https://github.com/gizak/termui. 
+# Hexa
 
 ## What is this
 
