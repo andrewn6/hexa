@@ -39,7 +39,6 @@ func Menu() {
 
 		switch input {
 		case "1":
-			cfmt.Println("{{Ok! Let's get started!}}::green\n")
 			game.Game()
 		case "2":
       tutorial.Tutorial()

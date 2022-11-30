@@ -1,5 +1,7 @@
 # Hexa
 
+[![build](https://github.com/anddddrew/hexa/actions/workflows/build.yml/badge.svg)](https://github.com/anddddrew/hexa/actions/workflows/build.yml)
+
 ## What is this
 
 <img align="right" width="40%" src="https://user-images.githubusercontent.com/59238070/203317267-6d471145-3131-483f-aed6-355cc60c70e1.gif" alt="Screenshot">
