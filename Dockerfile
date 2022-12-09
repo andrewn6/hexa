@@ -11,6 +11,4 @@ COPY . .
 
 RUN go mod download
 
-RUN go build -o hexa .
-
-./hexa
+RUN go build . 
